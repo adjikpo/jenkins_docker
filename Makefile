@@ -5,20 +5,7 @@
 
 CONSOLE=bin/console
 DC=docker-compose
-HAS_DOCKER:=$(shell command -v $(DC) 2> /dev/null)
-
-ifdef HAS_DOCKER
-	ifdef JENKINS_ENV
-		EXECROOT=$(DC) exec -Te JENKINS_ENV=$(JENKINS_ENV) jenkins
-		EXEC=$(DC) exec -Te JENKINS_ENV=$(JENKINS_ENV) jenkins
-	else
-		EXECROOT=$(DC) exec -T jenkins
-		EXEC=$(DC) exec -T jenkins
-	endif
-else
-	EXECROOT=
-	EXEC=
-endif
+EXEC=docker exec -it jenkins 
 
 .DEFAULT_GOAL := help
 
@@ -51,3 +38,6 @@ docker:
 stop:
 	$(DC) down
 
+.PHONY: exec ## Run bash in the jenkins container
+exec:
+	$(EXEC) /bin/bash
