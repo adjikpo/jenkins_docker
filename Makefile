@@ -41,3 +41,8 @@ stop:
 .PHONY: exec ## Run bash in the jenkins container
 exec:
 	$(EXEC) /bin/bash
+
+.PHONY: unlock ## Unlock Jenkins 
+unlock:
+	$(EXEC) cat /var/jenkins_home/secrets/initialAdminPassword
+

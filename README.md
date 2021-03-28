@@ -12,25 +12,61 @@
 ### with docker
 1. Launch the command  `make help` or `make` generate list of targets with descriptions
 2. Build the docker and project environment
-```bash
-$ make env 
-```
-- add your port on the docker-compose.override.yml
+    ```bash
+    $ make env 
+    ```
+    - add your port on the docker-compose.override.yml
 
 3. Build the docker & the app
-``` bash
+    ``` bash
 
-$ make docker
-```
+    $ make docker
+    ```
 4. Stop the app
-``` bash
+    ``` bash
 
-$ make stop
-```
+    $ make stop
+    ```
 5. Run bash in the jenkins container
-``` bash
+    ``` bash
 
-$ make exec
-```
+    $ make exec
+    ```
 ---------------------------------------------------------
 ## Initialisation of jenkins
+
+1. Browse to http://localhost:8080 (or whichever port you configured for Jenkins when installing it) and wait until the Unlock Jenkins page appears.
+
+2. From the terminal, use unlock command 
+    ``` bash
+
+    $ make unlock
+    ```
+3. On the Unlock Jenkins page, paste this password into the Administrator password field and click Continue.
+
+4. After unlocking Jenkins, the Customize Jenkins page appears. Here you can install any number of useful plugins as part of your initial setup.
+
+    Click one of the two options shown:
+
+    -  `Install suggested plugins` - to install the recommended set of plugins, which are based on most common use cases.
+
+    - `Select plugins to install` - to choose which set of plugins to initially install. When you first access the plugin selection page, the suggested plugins are selected by default.
+
+5.  Finally, after customizing Jenkins with plugins, Jenkins asks you to create your first administrator user.
+
+    -  When the Create First Admin User page appears, specify the details for your administrator user in the respective fields and click Save and Finish.
+
+    - When the Jenkins is ready page appears, click Start using Jenkins.
+    
+        Notes:
+
+        - This page may indicate Jenkins is almost ready! instead and if so, click Restart.
+
+        -  If the page does not automatically refresh after a minute, use your web browser to refresh the page manually.
+
+    - If required, log in to Jenkins with the credentials of the user you just created and you are ready to start using Jenkins
+
+## Jenkinks Documentation
+Where to find it : [Jenkins Docs][D]
+
+[D]:https://www.jenkins.io/doc/book/using/
