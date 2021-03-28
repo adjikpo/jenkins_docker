@@ -27,6 +27,10 @@ $ make docker
 
 $ make stop
 ```
+5. Run bash in the jenkins container
+``` bash
 
+$ make exec
+```
 ---------------------------------------------------------
 ## Initialisation of jenkins
