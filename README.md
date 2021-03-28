@@ -16,8 +16,7 @@
 $ make env 
 ```
 - add your port on the docker-compose.override.yml
-- add the name database & password root on .env.docker
-- add the name, password & name database on .env.local(src/.env.local)
+
 3. Build the docker & the app
 ``` bash
 

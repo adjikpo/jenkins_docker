@@ -36,6 +36,7 @@ help:
 ##---------------------------------------------------------------------------
 .PHONY: env ## Creation of volumes
 env:
+	$(RUN) cp docker-compose.override.yml.dist docker-compose.override.yml
 	mkdir -p ./srv/data/jenkins
 	mkdir -p ./srv/data/jenkins_data
 	echo "The files tree  are init"
