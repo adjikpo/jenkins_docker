@@ -37,11 +37,16 @@
 
 1. Browse to http://localhost:8080 (or whichever port you configured for Jenkins when installing it) and wait until the Unlock Jenkins page appears.
 
+![setup-jenkins-01-unlock-jenkins-page](https://user-images.githubusercontent.com/44362825/112753431-ee149900-8fd7-11eb-8715-e0aa321a4084.jpg)
+
+
 2. From the terminal, use unlock command 
     ``` bash
 
     $ make unlock
     ```
+    ![Screen Capture_select-area_20210328151556](https://user-images.githubusercontent.com/44362825/112753629-9a567f80-8fd8-11eb-8c4a-995c9b7a20bc.png)
+
 3. On the Unlock Jenkins page, paste this password into the Administrator password field and click Continue.
 
 4. After unlocking Jenkins, the Customize Jenkins page appears. Here you can install any number of useful plugins as part of your initial setup.
