@@ -5,7 +5,7 @@
 
 CONSOLE=bin/console
 DC=docker-compose
-EXEC=docker exec -it jenkins 
+EXEC=docker exec -it jenkins
 
 .DEFAULT_GOAL := help
 
